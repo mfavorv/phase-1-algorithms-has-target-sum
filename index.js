@@ -1,5 +1,24 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  let results = [];
+
+  array.forEach((num , index)=> {
+  
+    for(i = index + 1; i < array.length; i++ ){
+    let sum = num + array[i];
+    results.push(sum);
+
+    }
+  });
+
+ for(result of results){
+  if(result === target){
+    return true;
+  }
+} 
+{  return false };
+
+ 
 }
 
 /* 
@@ -8,6 +27,8 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  Check if any two numbers in the array add up to the target number.
+  If there are two numbers that do so, return true, if not return false.
 */
 
 /*
